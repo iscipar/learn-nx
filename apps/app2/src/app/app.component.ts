@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { initUsers } from '@learn-nx/shared/store';
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'learn-nx-root',
@@ -7,4 +9,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app2';
+
+  constructor(private store: Store<any>) {
+
+  }
+
+  ngOnInit(): void {
+    this.store.dispatch(initUsers());
+  }
 }
