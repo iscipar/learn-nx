@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { UsersEntity, initUsers, loadUsersSuccess } from '@learn-nx/shared/store';
 import { Store } from '@ngrx/store';
 import { UsersService } from './services/users.service';
+import { AppState } from './state/app.state';
 
 @Component({
   selector: 'learn-nx-root',
@@ -12,7 +13,7 @@ export class AppComponent {
   title = 'app1';
 
   constructor(
-    private store: Store<any>,
+    private store: Store<AppState>,
     private usersService: UsersService
   ) {
 
