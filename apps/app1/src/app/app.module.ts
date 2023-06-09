@@ -10,6 +10,7 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import { ROOT_REDUCERS } from './state/app.state';
 
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent],
@@ -18,16 +19,7 @@ import { StoreRouterConnectingModule } from '@ngrx/router-store';
     RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' }),
     SharedComponentsModule,
     SharedStoreModule,
-    StoreModule.forRoot(
-      {},
-      {
-        metaReducers: [],
-        runtimeChecks: {
-          strictActionImmutability: true,
-          strictStateImmutability: true,
-        },
-      }
-    ),
+    StoreModule.forRoot(ROOT_REDUCERS),
     StoreDevtoolsModule.instrument({name: 'TEST'}),
     EffectsModule.forRoot([]),
     StoreRouterConnectingModule.forRoot(),
