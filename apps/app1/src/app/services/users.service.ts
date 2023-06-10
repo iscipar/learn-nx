@@ -12,29 +12,34 @@ export class UsersService {
   getDataApi(): Observable<any> {
     const data = [
       {
-        id: "64830ce08de2bfe4df01fbfe",
-        name: "Frazier Foreman",
-        image: "https://gravatar.com/avatar/377ac9326ebaee4044d830819df6e046?s=400&d=robohash&r=x"
+        "id": "64846c00d9340eb6cb0",
+        "name": "Della Perkins",
+        "company": "SULFAX",
+        "phone": "+1 (911) 528-2448"
       },
       {
-        id: "64830ce0944399626030c684",
-        name: "Murray Lucas",
-        image: "https://gravatar.com/avatar/377ac9326ebaee4044d830819df6e046?s=400&d=monsterid&r=x"
+        "id": "64846c008c16b463e9d",
+        "name": "Sweet Charles",
+        "company": "SENTIA",
+        "phone": "+1 (913) 539-3722"
       },
       {
-        id: "64830ce0f2413074406596c3",
-        name: "Acevedo Burks",
-        image: "https://gravatar.com/avatar/377ac9326ebaee4044d830819df6e046?s=400&d=wavatar&r=x"
+        "id": "64846c0012ded5ac87f",
+        "name": "Nadia Golden",
+        "company": "NIKUDA",
+        "phone": "+1 (846) 569-3365"
       },
       {
-        id: "64830ce020868d1fec1a44ac",
-        name: "Mckinney Harrington",
-        image: "https://robohash.org/377ac9326ebaee4044d830819df6e046?set=set4&bgset=&size=400x400"
+        "id": "64846c00694aef56e8f",
+        "name": "Beasley Sawyer",
+        "company": "BARKARAMA",
+        "phone": "+1 (901) 515-3961"
       },
       {
-        id: "64830ce00f793dceafdca3cf",
-        name: "Janis Newton",
-        image: "https://gravatar.com/avatar/23a895fd8417da09de8de12615aaf9dd?s=400&d=robohash&r=x"
+        "id": "64846c002011d053ef2",
+        "name": "Clarissa Moreno",
+        "company": "KYAGORO",
+        "phone": "+1 (932) 523-2261"
       }
     ]
 

@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
-import { selectLoading } from '@learn-nx/shared/store';
+import { selectListUsers, selectLoading } from '@learn-nx/shared/store';
 import { AppState } from './state/app.state';
 
 @Component({
@@ -158,6 +158,16 @@ import { AppState } from './state/app.state';
       #hero .logo-container svg {
         color: rgba(255, 255, 255, 1);
         width: 66.666667%;
+      }
+      #users {
+        margin-top: 3.5rem;
+      }
+      #users h2 {
+        font-weight: 500;
+        font-size: 1.25rem;
+        letter-spacing: -0.025em;
+        line-height: 1.75rem;
+        padding-bottom: 1rem;
       }
       #middle-content {
         align-items: flex-start;
@@ -447,6 +457,20 @@ import { AppState } from './state/app.state';
               />
             </svg>
           </div>
+        </div>
+        <!--  USERS  -->
+        <div id="users">
+          <h2>Users</h2>
+          <ngx-datatable
+            class="material striped"
+            [rows]="users$ | async"
+            [columns]="columns"
+            [columnMode]="'force'"
+            [headerHeight]="50"
+            [footerHeight]="50"
+            [rowHeight]="50"
+          >
+          </ngx-datatable>
         </div>
         <!--  MIDDLE CONTENT  -->
         <div id="middle-content">
@@ -843,6 +867,9 @@ nx affected:e2e</pre>
 })
 export class NxWelcomeComponent {
   loading$: Observable<boolean> = new Observable();
+  users$: Observable<any> = new Observable();
+
+  columns = [{ name: 'ID' }, { name: 'Name' }, { name: 'Company' }, { name: 'Phone' }];
 
   constructor(private store: Store<AppState>) {
 
@@ -850,5 +877,6 @@ export class NxWelcomeComponent {
 
   ngOnInit(): void {
     this.loading$ = this.store.select(selectLoading);
+    this.users$ = this.store.select(selectListUsers);
   }
 }

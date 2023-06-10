@@ -4,5 +4,6 @@
 export interface UsersEntity {
   id: string | number; // Primary ID
   name: string;
-  image: string;
+  company: string;
+  phone: string;
 }

@@ -10,6 +10,7 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { ROOT_REDUCERS } from './state/app.state';
 
 @NgModule({
@@ -23,6 +24,7 @@ import { ROOT_REDUCERS } from './state/app.state';
     StoreDevtoolsModule.instrument({name: 'TEST'}),
     EffectsModule.forRoot([]),
     StoreRouterConnectingModule.forRoot(),
+    NgxDatatableModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -16,7 +16,12 @@
         "polyfills": ["zone.js"],
         "tsConfig": "apps/app1/tsconfig.app.json",
         "assets": ["apps/app1/src/favicon.ico", "apps/app1/src/assets"],
-        "styles": ["apps/app1/src/styles.css"],
+        "styles": [
+          "./node_modules/@swimlane/ngx-datatable/index.css",
+          "./node_modules/@swimlane/ngx-datatable/themes/material.css",
+          "./node_modules/@swimlane/ngx-datatable/assets/icons.css",
+          "apps/app1/src/styles.css"
+        ],
         "scripts": []
       },
       "configurations": {
