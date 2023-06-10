@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { UsersEntity, initUsers, loadUsersSuccess } from '@learn-nx/shared/store';
+import { initUsers } from '@learn-nx/shared/store';
 import { Store } from '@ngrx/store';
-import { UsersService } from './services/users.service';
 import { AppState } from './state/app.state';
 
 @Component({
@@ -13,20 +12,12 @@ export class AppComponent {
   title = 'app1';
 
   constructor(
-    private store: Store<AppState>,
-    private usersService: UsersService
+    private store: Store<AppState>
   ) {
 
   }
 
   ngOnInit(): void {
     this.store.dispatch(initUsers());
-    
-    this.usersService.getDataApi()
-      .subscribe((response: UsersEntity[]) => {
-        this.store.dispatch(loadUsersSuccess(
-          {users: response}
-        ));
-      });
   }
 }
