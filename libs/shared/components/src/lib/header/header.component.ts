@@ -5,4 +5,11 @@ import { Component } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  title = 'learn-nx';
+  signedIn: boolean = false;
+
+  logOut(): void {
+    console.log('logOut');
+  }
+}

@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@learn-nx/shared/components": ["libs/shared/components/src/index.ts"],
+      "@learn-nx/shared/material": ["libs/shared/material/src/index.ts"],
       "@learn-nx/shared/services": ["libs/shared/services/src/index.ts"],
       "@learn-nx/shared/store": ["libs/shared/store/src/index.ts"]
     }
