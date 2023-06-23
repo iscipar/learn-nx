@@ -3,8 +3,8 @@
         <h1>{{title}}</h1>
 
         <span class="spacer"></span>
-        <button *ngIf="signedIn" mat-raised-button>Home</button>
-        <button *ngIf="!signedIn" mat-raised-button color="primary">Login</button>
-        <button *ngIf="signedIn" mat-raised-button color="warn" (click)="logOut()">Logout</button>
+        <button id="home-button" *ngIf="signedIn" mat-raised-button>Home</button>
+        <button id="login-button" *ngIf="!signedIn" mat-raised-button color="primary">Login</button>
+        <button id="logout-button" *ngIf="signedIn" mat-raised-button color="warn" (click)="logOut()">Logout</button>
     </mat-toolbar-row>
 </mat-toolbar>
