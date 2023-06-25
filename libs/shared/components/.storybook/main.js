@@ -1,9 +1,13 @@
 const config = {
   stories: ['../**/*.stories.@(js|jsx|ts|tsx|mdx)'],
-  addons: ['@storybook/addon-essentials', '@storybook/addon-actions', '@storybook/addon-interactions'],
+  addons: ['@storybook/addon-essentials', '@storybook/addon-actions', '@storybook/addon-interactions', '@storybook/addon-docs'],
   framework: {
     name: '@storybook/angular',
     options: {},
+  },
+  docs: {
+    autodocs: true,
+    defaultName: 'Docs',
   },
 };
 
