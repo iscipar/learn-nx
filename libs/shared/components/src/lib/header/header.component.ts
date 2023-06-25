@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'learn-nx-header',
@@ -8,8 +8,9 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
   title = 'learn-nx';
   signedIn: boolean = false;
+  @Output() onLogout: EventEmitter<any> = new EventEmitter();
 
   logOut(): void {
-    console.log('logOut');
+    this.onLogout.emit({ message: 'return to home page' });
   }
 }

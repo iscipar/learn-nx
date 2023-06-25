@@ -1,4 +1,4 @@
-describe('shared-components', () => {
+describe('headercomponent', () => {
   it('should not be signed', () => {
     cy.visit('/iframe.html?id=headercomponent--not-signed')
     cy.get('#home-button').should('not.exist');
